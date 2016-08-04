@@ -1,0 +1,14 @@
+<ion-view  view-title="Login">
+<ion-content class="padding">
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input type="text" id="username" placeholder="User Name" ng-model="name.username">
+    </label>
+    <label class="item item-input">
+      <input type="password" id="password" placeholder="Password" ng-model="name.password">
+    </label>
+  </div>
+  <input type="checkbox" id="cbox" ng-model="name.checked"> Keep Me Signed In </ion-checkbox>
+  <button class="button button-block button-positive" ng-click="emplogin(name)">Login</button>
+</ion-content>
+</ion-view>

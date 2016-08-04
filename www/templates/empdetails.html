@@ -1,0 +1,24 @@
+<ion-view view-title="Employee Details">
+  <ion-content>
+    <div class="list card" ng-controller="empindCtrl">
+
+  <div class="item item-avatar">
+    <img src="../img/ionic.png">
+    <h2>{{resultString.first_name+" "+resultString.last_name}}</h2>
+    <p>Working in {{resultString.company}}</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="" src="../img/ionic.png">
+    <p>
+    He/She is working in {{resultString.company}} company<br>
+	  Contact information:<br>
+	  Mobile Number:{{resultString.mobile_number}}<br>
+	  Email Id:{{resultString.email_id}}
+    </p>
+
+  </div>
+
+</div>
+  </ion-content>
+</ion-view>

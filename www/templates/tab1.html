@@ -1,0 +1,60 @@
+<ion-view title="Instructions" ng-controller="tab1Ctrl">
+
+  <ion-nav-buttons side="left">
+    <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-show="!slideIndex">
+      Skip Intro
+    </button>
+    <button class="button button-positive button-clear no-animation"
+            ng-click="previous()" ng-show="slideIndex > 0">
+      Previous Slide
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-positive button-clear no-animation"
+            ng-click="next()" ng-show="slideIndex != 2">
+      Next
+    </button>
+    <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-show="slideIndex == 2">
+      Start using MyApp
+    </button>
+  </ion-nav-buttons>
+
+  <ion-slide-box on-slide-changed="slideChanged(index)">
+
+    <ion-slide>
+      <div class="box orange">
+        <ul>
+          <li>slide1</li>
+          <li>Please follow the instructions carefully to use the appliction </li>
+          <li>In the Left Side Menu You can find the login logout options</li>
+          <li>Please use application for employee search purpose</li>
+
+        </ul>
+
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box white">
+        <ul>
+          <li>slide2</li>
+          <li>Please follow the instructions carefully to use the appliction </li>
+          <li>In the Left Side Menu You can find the login logout options</li>
+          <li>Please use application for employee search purpose</li>
+        </ul>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box green">
+        <ul>
+          <li>slide3</li>
+          <li>Please follow the instructions carefully to use the appliction </li>
+          <li>In the Left Side Menu You can find the login logout options</li>
+          <li>Please use application for employee search purpose</li>
+        </ul>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+
+</ion-view>

@@ -1,0 +1,44 @@
+<ion-view view-title="Employee Search">
+  <ion-content>
+
+<div class="list list-inset">
+    <label class="item item-input">
+		<i class="icon ion-search placeholder-icon"></i>
+		<input type="text" id="firstName" placeholder="Search by name or email or mobile number"  ng-keyup="firstsearch(name)" ng-model="name.firstName" >
+    <input type="hidden" id="searchId"/>
+	</label>
+
+	<div class="list" id="dfirstList" style="display:none;">
+		<ul ng-repeat="name in resultString track by $index">
+			<a href="" class="item item-icon-left" ng-click="setfname(name.first_name,name.user_id)"><li>{{name.first_name}}</li></a>
+		</ul>
+	</div>
+</div>
+
+<div class="row">
+   <div class="col col-33"></div>
+   <div class="col col-33 col-center">
+      <button class="button button-block button-positive" ng-click="search2(name)">
+  Search
+</button>
+   </div>
+   <div class="col col-33">
+
+   </div>
+</div>
+
+
+<div class="row" id="dTable" style="display:none;">
+
+  <div class="list" ng-controller="empindCtrl" ng-repeat="name in resultString3"  ng-click="empinddetails(name.user_id)" >
+					<a class="item item-avatar" href="#/tab/empinddetails">
+						<img src="../img/gmay.jpg">
+						<h2>{{name.first_name}} &nbsp; {{name.last_name}}</h2>
+						<p>Working in {{name.company}}</p>
+					</a>
+</div>
+</div>
+
+
+  </ion-content>
+</ion-view>
